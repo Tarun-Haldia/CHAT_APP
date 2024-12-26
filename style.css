@@ -1,0 +1,128 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Static Stars */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.stars::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    100px 80px white, 200px 300px white, 400px 500px white, 600px 700px white,
+    800px 900px white, 150px 200px white, 900px 100px white, 300px 700px white,
+    500px 400px white, 1000px 600px white, 700px 300px white, 400px 800px white,
+    300px 200px white, 800px 500px white, 1200px 700px white, 1100px 300px white,
+    600px 900px white, 900px 800px white, 100px 300px white, 1500px 100px white,
+    1200px 400px white, 400px 600px white, 700px 100px white, 800px 600px white,
+    1000px 200px white, 150px 500px white, 250px 700px white, 600px 500px white,
+    900px 100px white, 800px 400px white, 1300px 500px white, 500px 100px white,
+    300px 300px white, 200px 600px white, 1000px 800px white, 1100px 100px white,
+    150px 200px white, 1300px 200px white, 400px 700px white;
+  animation: twinkling 3s infinite ease-in-out;
+}
+
+/* Twinkling Animation */
+@keyframes twinkling {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Chat Application Styling */
+.chat-container {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.6); /* Transparent black */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Deeper shadow for depth */
+  border-radius: 15px; /* Rounded corners */
+  backdrop-filter: blur(8px); /* Glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white header */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  color: white; /* Text inside the chat box */
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); /* Scrollbar matches design */
+  border-radius: 10px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent input area */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2); /* Transparent input field */
+  color: white; /* Text matches theme */
+}
+
+.chat-input input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder color */
+}
+
+.chat-input button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
